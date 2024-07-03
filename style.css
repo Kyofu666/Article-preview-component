@@ -1,0 +1,207 @@
+body{
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    background-color:var(--LightGrayishBlue);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+*,::before,::after{
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+/* basics changes */
+.largeTitle{
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 700;
+    font-size: 16px;
+    max-width: 300px;
+}
+.midTitle{
+    color: var(--DesaturatedDarkBlue);
+    font-size: 12px;
+    max-width: 350px;
+}
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-self: center;
+}
+/* Container */
+.container{
+    display: flex;
+}
+.right-side{
+    padding: 0px 20px;
+    background-color: white;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.details{
+    display: flex;
+    gap: 15px;
+}
+.name{
+    color: var(--VeryDarkGrayishBlue);
+    line-height: 1.6;
+    font-weight: 700;
+}
+.date{
+    color: var(--DesaturatedDarkBlue);
+    font-weight: normal;
+}
+.share-container{
+   display: none;
+}
+.share1{
+    background-color: var(--LightGrayishBlue);
+    font-size: 16px;
+    color: var(--VeryDarkGrayishBlue);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    cursor: pointer;
+}
+.share-container2{
+    display: none;
+}
+
+/* hide and show */
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 47%;
+    left: 59%;
+}
+.show .share2{
+    display: none;
+}
+.show .share1 ,.share1:hover{
+    background-color: var(--VeryDarkGrayishBlue);
+    color: white;
+
+}
+.show .icon-container{
+    background-color: var(--VeryDarkGrayishBlue);
+    color: var(--LightGrayishBlue);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+}
+.show .icon{
+    font-size: 20px;
+    display: flex;
+    gap: 15px;
+}
+.show .down-arrow{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: var(--VeryDarkGrayishBlue);
+    transform: rotate(135deg);
+    bottom: 0;
+    top: 45px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 500px){
+    .share-container{
+        display: none;
+    }
+    .container{
+        padding:20px;
+        flex-direction: column;
+        align-items:center ;
+        justify-content: center;
+        
+    }
+    .right-side{
+        height: auto;
+    }
+
+    .left-side img{
+        border-radius: 15px 15px 0px 0px ;
+        height: 304px; 
+    }
+    .show2{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        position: initial;
+        background-color: var(--VeryDarkGrayishBlue);
+        padding: 10px 13px;
+        width: 100%;
+        border-radius: 0px 0px 15px 15px;
+    }
+    .show3 .info{
+        display: none;
+    }
+    .show2 .down-arrow{
+        display: none;
+    }
+    .show2 .icon-container{
+        background-color: var(--VeryDarkGrayishBlue);
+        color: var(--LightGrayishBlue);
+        padding: 0px;
+        border-radius: 0px 0px 15px 15px;
+        padding: 0px 13px;
+        background-color: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    .show2 .icon{
+        font-size: 25px;
+        display: flex;
+        gap: 15px;
+    }
+    .show2 .share2{
+    background-color: var(--LightGrayishBlue);
+    font-size: 16px;
+    color: var(--VeryDarkGrayishBlue);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    cursor: pointer;
+    }   
+    
+   .btn-share{
+       
+   }
+}
+
